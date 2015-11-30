@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Astm logo</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+		.container .letter {
+			font-size: 100px;
+			position: absolute;
+	    font-weight: bolder;
+		}
+		.border {
+			margin: 100px auto;
+			border: solid 5px;
+	    height: 160px;
+    	width: 565px; 
+		}
+		#a{
+			margin: 5px 0px 5px 5px;
+		}
+		#s{
+			margin: 5px 0px 5px 140px;
+		}
+		#t{
+			margin: 5px 0px 5px 275px;
+		}
+		#m{
+			margin: 5px 0px 5px 410px;
+		}
+		</style>
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="border">
+				<div class="letter text-center pull-left clearfix" id="a">ⓐ</div>
+				<div class="letter text-center pull-left clearfix" id="s">ⓢ</div>
+				<div class="letter text-center pull-left clearfix" id="t">ⓣ</div>
+				<div class="letter text-center pull-left clearfix" id="m">ⓜ</div>
+			</div>
+		</div>
+
+
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+		<script>
+		$(document).ready(function() {
+		    function loop() {
+		    	// increase my var
+		    	i+=1;
+	        if(i%2){
+	        	// Animate A to left
+		        $('#a').animate ({
+		            'margin-left': '-=50',
+		        }, 5000, 'linear', function() {
+		            loop();
+		        });
+	        	// Animate S to left
+		        $('#s').animate ({
+		            'margin-left': '-=50',
+		        }, 1000, 'linear', function() {
+		            loop();
+		        });
+	        	// Animate T to left
+		        $('#t').animate ({
+		            'margin-left': '-=50',
+		        }, 5000, 'linear', function() {
+		            loop();
+		        });
+	        	// Animate M to left
+		        $('#m').animate ({
+		            'margin-left': '-=50',
+		        }, 1000, 'linear', function() {
+		            loop();
+		        });
+
+	        }else{
+	        	// Animate A to right
+		        $('#a').animate ({
+		            'margin-left': '+=50',
+		        }, 1000, 'linear', function() {
+		            loop();
+		        });
+	        	// Animate S to right
+		        $('#s').animate ({
+		            'margin-left': '+=50',
+		        }, 5000, 'linear', function() {
+		            loop();
+		        })
+	        	// Animate T to right
+		        $('#t').animate ({
+		            'margin-left': '+=50',
+		        }, 1000, 'linear', function() {
+		            loop();
+		        });
+	        	// Animate M to right
+		        $('#m').animate ({
+		            'margin-left': '+=50',
+		        }, 5000, 'linear', function() {
+		            loop();
+		        });	        	
+	        }// if
+
+		    }
+		    var i=1;
+		    loop();
+		});
+		</script>
+
+	</body>
+</html>
